@@ -19,7 +19,7 @@ docker build --tag jenkins-powershell:lts .
 ```
 Specific Version
 ```
-docker build --tag jenkins-powershell:2.73.1 --build-arg jenkins_tag=2.73.1 .
+docker build --tag jenkins-powershell:2.73.2 --build-arg jenkins_tag=2.73.2 .
 ```
 
 ### Run
