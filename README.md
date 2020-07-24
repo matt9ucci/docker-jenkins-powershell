@@ -37,3 +37,16 @@ Jenkins version
 ```
 docker run --rm matt9ucci/jenkins-powershell:lts --version
 ```
+
+### Take advantage of the features of base imagae
+
+All the features available in the Jenkins official image is also available in this image.
+
+The following example runs an LTS ephemeral container passing `JAVA_OPTS` for skipping the initial setup wizard:
+```
+docker run -d -p 8080:8080 -p 50000:50000 --rm --env JAVA_OPTS=-Djenkins.install.runSetupWizard=false matt9ucci/jenkins-powershell:lts
+```
+
+For more information, see the following documents:
+* [Official Jenkins Docker image README](https://github.com/jenkinsci/docker/blob/master/README.md)
+* [Jenkins Features Controlled with System Properties](https://www.jenkins.io/doc/book/managing/system-properties/)
